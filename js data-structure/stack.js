@@ -36,6 +36,7 @@ class Stack {
 	}
 }
 
+//十进制转换为八进制
 function decToOcx(num) {
 	var stack = new Stack();
 	var Mod, x;
