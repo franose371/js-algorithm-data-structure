@@ -70,7 +70,7 @@ class LinkList {
 		let cur = this.head;
 		if (!index) {
 			//若没有输入index，则删除最后一个
-			while (cur) {
+			while (cur.next.next) {
 				cur = cur.next;
 			}
 			cur.next = null;
@@ -78,7 +78,7 @@ class LinkList {
 			return true;
 		}
 		if (index && index > 0 && index < this.count) {
-			while (index > 0) {
+			while (index - 1 > 0) {
 				cur = cur.next;
 				index--;
 			}
@@ -89,8 +89,9 @@ class LinkList {
 			} else {
 				cur.next = null;
 			}
-
+			return true;
 		}
+		return false;
 	}
 
 }
